@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block main_block %}
+
+    <div class="jumbotron">
+
+        <div class="header"><h1>Please Login !</h1></div>
+
+        <form method="POST" action={% url 'sec_app:user_login' %} class="form-group">
+            <div>
+                 {% csrf_token %}
+                <input type="text" name="username" class="form-control" placeholder="Enter Username"><br>
+                <input type="text" name="password" class="form-control" placeholder="Enter Password"><br><br>
+            </div>
+
+            <input type="submit" value="login" class="btn btn-success">
+        </form>
+
+
+    </div>
+
+{% endblock %}

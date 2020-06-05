@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block main_block %}
+<div class="container jumbotron"><h1>welcome to OTHER</h1></div>
+<div><h3>Go to next : <a href={% url 'sec_app:relative' %}> click me !</a></h3></div>
+<div>
+    <h3>{{text | cut:'views'}}</h3>
+    <h4>{{number | add:"99"}}</h4>
+</div>
+{% endblock %}
