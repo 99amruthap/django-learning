@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block body_content %}
+
+<div class="container">
+    <h1>welcome to school_list.html</h1>
+
+<ol>
+    {% for school in school_list %}
+    <h3><li><a href="{{school.id}}">{{school.name}}</a></li></h3>
+    {% endfor %}
+</ol>
+
+</div>
+    {% endblock %}
